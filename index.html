@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script>
+          function back_space()
+          {
+              var data=document.getElementById("result").value;
+              data= data.slice(0,-1);
+              document.getElementById("result").value=data;
+
+          }
+          function calci()
+          {
+             var data=document.getElementById("result").value;
+             var result=eval(data);
+             document.getElementById("result").value=result;
+          }
+          function on_btn()
+          {
+            var l=document.getElementsByClassName("off").length;
+             for(i=0;i<l;i++)
+             {
+                document.getElementsByClassName("off")[i].disabled=false;
+             }  
+          }
+          function off_btn()
+          {
+            var l=document.getElementsByClassName("off").length;
+              document.getElementById("result").value=null;
+             for(i=0;i<l;i++)
+             {
+                document.getElementsByClassName("off")[i].disabled=true;
+             }  
+          }
+          function clear_btn()
+          {
+            document.getElementById("result").value=null;
+          }
+    </script>
+</head>
+<body>
+    <div class="black_box" >
+        <input style="height: 80px;width: 443px;;background-color:rgb(32, 22, 22);color: white;font-size: 29px;text-align: end;" type="text" id="result"><br><br>
+        <input style="width: 80px;height: 50px;border-radius: 15px;margin-top: 40px;margin-left: 60px" type="button" value="7" class="off" onclick="document.getElementById('result').value+=7"disabled>
+        <input style="width: 80px;height: 50px;border-radius: 15px;" type="button" value="9" class="off" onclick="document.getElementById('result').value+=9"disabled>
+         <input style="width: 80px;height: 50px;border-radius: 15px;" type="button" value="8" class="off" onclick="document.getElementById('result').value+='8'"disabled>
+          <input style="width: 80px;height: 50px;border-radius: 15px;" type="button" value="X" class="off" onclick="document.getElementById('result').value+='*'"disabled>
+       
+        <BR><BR>
+        <input style="width: 80px;height: 50px;border-radius: 15px;margin-left: 60px" type="button" value="4" class="off" onclick="document.getElementById('result').value+=4"disabled>
+        <input style="width: 80px;height: 50px;border-radius: 15px;" type="button" value="5" class="off" onclick="document.getElementById('result').value+=5"disabled>
+        <input style="width: 80px;height: 50px;border-radius: 15px;" type="button" value="6" class="off" onclick="document.getElementById('result').value+=6"disabled>
+        <input style="width: 80px;height: 50px;border-radius: 15px;" type="button" value="/" class="off" onclick="document.getElementById('result').value+='/'"disabled>
+        <br><br>
+        <input style="width: 80px;height: 50px;border-radius: 15px;margin-left: 60px" type="button" value="3" class="off" onclick="document.getElementById('result').value+=3"disabled>
+        <input style="width: 80px;height: 50px;border-radius: 15px;" type="button" value="2" class="off" onclick="document.getElementById('result').value+=2"disabled>
+        <input style="width: 80px;height: 50px;border-radius: 15px;" type="button" value="1" class="off" onclick="document.getElementById('result').value+=1"disabled>
+        <input style="width: 80px;height: 50px;border-radius: 15px;" type="button" value="+" class="off" onclick="document.getElementById('result').value+='+'"disabled>
+        <br><br>
+        <input style="width: 80px;height: 50px;border-radius: 15px;margin-left: 60px" type="button" value="0" class="off" onclick="document.getElementById('result').value+=0"disabled>
+        <input style="width: 80px;height: 50px;border-radius: 15px;" type="button" value="00" class="off" onclick="document.getElementById('result').value+='00'"disabled>
+        <input style="width: 80px;height: 50px;border-radius: 15px;" type="button" value="=" class="off" onclick="calci()"disabled>
+        <input style="width: 80px;height: 50px;border-radius: 15px;" type="button" value="-" class="off" onclick="document.getElementById('result').value+='-'"disabled>
+        <br><br>
+        <button style="background-color: rgb(177, 177, 56);width:80px;height: 50px;margin-left: 60px;border-radius: 20px;" onclick="on_btn()">ON</button>
+        <button style="background-color: rgb(177, 177, 56);width:80px;height: 50px;border-radius: 20px" onclick="off_btn()">OFF</button>
+        <button style="background-color: rgb(177, 177, 56);width:80px;height: 50px;border-radius: 20px" onclick="clear_btn()">AC</button>
+        <button style="background-color: rgb(177, 177, 56);width:80px;height: 50px;border-radius: 20px" onclick="back_space()"><--</button>
+        </div>
+        
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
